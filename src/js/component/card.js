@@ -1,20 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export function Card() {
+export function Card(props) {
 	return (
 		<div className="card" style={{ width: "15rem" }}>
-			<img
-				src="http://placehold.jp/500x325.png"
-				className="card-img-top"
-				alt="..."
-			/>
+			<img src={props.imageURL} className="card-img-top" alt="..." />
 			<div className="card-body">
-				<h5 className="card-title">Card title</h5>
-				<p className="card-text">
-					This is a wider card with supporting text below as a natural
-					lead-in to additional content. This content is a little bit
-					longer.
-				</p>
+				<h5 className="card-title">{props.cardtitle}</h5>
+				<p className="card-text"> {props.description} </p>
 				<p className="card-text">
 					<small className="text-muted">
 						Last updated 3 mins ago
@@ -24,3 +17,9 @@ export function Card() {
 		</div>
 	);
 }
+
+Card.propTypes = {
+	cardtitle: PropTypes.string,
+	description: PropTypes.string,
+	imageURL: PropTypes.string
+};

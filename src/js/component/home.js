@@ -15,10 +15,26 @@ export function Home() {
 			<div className="container justify-content-center">
 				<Jumbotron />
 				<div className="row justify-content-center">
-					<Card />
-					<Card />
-					<Card />
-					<Card />
+					<Card
+						cardtitle="Hola :)"
+						description="Esta es una descripción1"
+						imageURL="https://via.placeholder.com/200x50"
+					/>
+					<Card
+						cardtitle="Ciao"
+						description="Esta es una descripción2"
+						imageURL="https://via.placeholder.com/200x75"
+					/>
+					<Card
+						cardtitle="Hello"
+						description="Esta es una descripción3"
+						imageURL="https://via.placeholder.com/200x10"
+					/>
+					<Card
+						cardtitle="Hallo"
+						description="Esta es una descripción4"
+						imageURL="https://via.placeholder.com/200x50"
+					/>
 				</div>
 			</div>
 		</div>
